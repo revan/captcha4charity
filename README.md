@@ -13,6 +13,8 @@ Jobs are stored in a priority queue implemented within MongoDB, sorted by due da
 
 ![](demo.png "Demo of Chrome App")
 
+The API is documented externally [over here](http://docs.captcha4charity.apiary.io/).
+
 ####TODO
 -	Protect against abuse of solution reporting
 -	Polish server/extension communications
