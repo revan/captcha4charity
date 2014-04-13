@@ -1,3 +1,6 @@
+//set focus on captcha field
+setTimeout( function() { $( '#promptField' ).focus() }, 100 );
+
 /**
  * CAPTCHA fetch button callback
  */
@@ -83,6 +86,3 @@ setInterval(function(){
 	$('#earnings').text('$'+fetchTeamScore($('#teamField').val()));
 }, 5000);
 $('#earnings').text('$'+fetchTeamScore($('#teamField').val()));
-
-//set focus on captcha field
-setTimeout( function() { $( '#promptField' ).focus() }, 100 );

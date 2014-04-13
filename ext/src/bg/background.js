@@ -11,3 +11,21 @@ chrome.extension.onMessage.addListener(
   	chrome.pageAction.show(sender.tab.id);
     sendResponse();
   });
+
+/**
+ * Updates icon badge to jobCount
+ */
+var updateJobCount = function(jobCount){
+	if(jobCount==0){
+		chrome.browserAction.setBadgeText({text:""});
+	}else{
+		chrome.browserAction.setBadgeText({text:""+jobCount});
+	}
+};
+
+//five second heartbeat, check for new jobs
+setInterval(function(){
+	//TODO: GET request
+
+	updateJobCount(4);
+}, 5000);
