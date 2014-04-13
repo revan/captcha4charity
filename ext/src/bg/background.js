@@ -1,9 +1,4 @@
-// if you checked "fancy-settings" in extensionizr.com, uncomment this lines
-
-// var settings = new Store("settings", {
-//     "sample_setting": "This is how you use Store.js to remember values"
-// });
-
+var baseurl = 'http://www.captcha4charity.org/'
 
 //example of using a message handler from the inject scripts
 chrome.extension.onMessage.addListener(
@@ -25,7 +20,6 @@ var updateJobCount = function(jobCount){
 
 //five second heartbeat, check for new jobs
 setInterval(function(){
-	//TODO: GET request
-
-	updateJobCount(4);
+	//GET request to /numjobs
+	updateJobCount($.get(baseurl+'numjobs'));
 }, 5000);

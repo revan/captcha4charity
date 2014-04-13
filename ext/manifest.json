@@ -21,6 +21,7 @@
   },
   "permissions": [
     "idle",
-    "tabs"
+    "tabs",
+    "http://www.captcha4charity.org/"
   ]
 }

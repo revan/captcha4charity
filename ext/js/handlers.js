@@ -1,3 +1,6 @@
+var baseurl = 'http://www.captcha4charity.org/'
+var rid = 0;
+
 //set focus on captcha field
 setTimeout( function() { $( '#promptField' ).focus() }, 100 );
 
@@ -7,11 +10,13 @@ setTimeout( function() { $( '#promptField' ).focus() }, 100 );
 $('#newButton').click(function () {
 
 	//$("#DateCountdown").fadeOut();
-	//dummy load
-	$('#prompt').attr('src', 'http://i.imgur.com/JtgFKl5.jpg');
+	
+	//GET /?
+
+	//$('#prompt').attr('src', url);
 
 	//$("#DateCountdown").TimeCircles().destroy();
-	$("#DateCountdown").attr('data-date', '2015-01-01 00:00:00');
+	$("#DateCountdown").attr('data-date', '2015-01-01 00:23:00');
 	//instantiates countdown
 	$("#DateCountdown").TimeCircles({
 	    "animation": "smooth",
@@ -54,9 +59,11 @@ $('#promptButton').click(function(){
 	$('#prompt').attr('src', '');
 	$("#DateCountdown").TimeCircles().destroy();
 
-	//TODO: POST response
+	//POST to /solve with a form (rid, soln)
+	$.post(baseurl+'solve', {rid:rid, soln:$('#promptField').val()});
 
-	//TODO: click the CAPTCHA fetch button
+	//click the CAPTCHA fetch button
+	//$('#newButton').click();
 	$('#promptField').val('').focus();
 })
 
