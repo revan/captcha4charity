@@ -1,6 +1,6 @@
 #captcha4charity
 ####Making the internet a worse place, making the world a better place.
-######Daniel Bordak and Revan Sopher, HackRU Spring 2014
+######Daniel Bordak and Revan Sopher, HackRU Spring 2014 - Winner of "Restored Faith In Humanity" Award
 
 A service for crowd-sourcing [CAPTCHA](www.captcha.net) challenges and raising money for charity.
 
